@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'crypto#index'
+  root 'gbp#sterling'
 
+
+get '/USD', to: 'usd#dollar'
+get '/EUR', to: 'eur#euro'
 
 end

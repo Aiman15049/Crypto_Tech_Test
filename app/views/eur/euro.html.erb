@@ -1,0 +1,32 @@
+<h2 class="ui center aligned icon header">
+  <i class="circular inverted euro icon"></i>
+  My Crypto Ticker
+</h2>
+
+<div class="ui container">
+<h4 class="ui left aligned icon">
+  <a class="item" href=/EUR  >
+  <i class="circular inverted redo icon"></i>
+  Refresh
+</h4>
+</div>
+<br>
+
+<div class="ui container">
+<table class="ui celled table">
+  <thead>
+    <tr><th>EUR</th>
+    <th>Bitcoin</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td data-label="EUR">1</td>
+      <td data-label="Bitcoin"><%= 1.0/@price_per_bitcoin.to_f %></td>
+    </tr>
+    <tr>
+      <td data-label="EUR"><%= @price_per_bitcoin %></td>
+      <td data-label="Bitcoin">1</td>
+    </tr>
+  </tbody>
+</table>
+</div>

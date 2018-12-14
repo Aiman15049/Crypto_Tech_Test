@@ -1,0 +1,40 @@
+<h2 class="ui center aligned icon header">
+  <i class="circular inverted dollar icon"></i>
+  My Crypto Ticker
+</h2>
+
+<div class="ui container">
+<h4 class="ui left aligned icon">
+  <a class="item" href=/USD  >
+  <i class="circular inverted redo icon"></i>
+  Refresh
+</h4>
+</div>
+<br>
+
+<div class="ui container">
+<table class="ui celled table">
+  <thead>
+    <tr><th>USD</th>
+    <th>Bitcoin</th>
+    <th>Smartcash</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td data-label="USD">1</td>
+      <td data-label="Bitcoin"><%= 1.0/@price_per_bitcoin.to_f %></td>
+      <td data-label="Smartcash"><%= 1.0/@price_of_smartcash_per_usd.to_f %></td>
+    </tr>
+    <tr>
+      <td data-label="USD"><%= @price_per_bitcoin %></td>
+      <td data-label="Bitcoin">1</td>
+      <td data-label="Smartcash"><%= @price_per_bitcoin.to_f * (1.0/@price_of_smartcash_per_usd.to_f) %></td>
+    </tr>
+    <tr>
+      <td data-label="USD"><%= @price_of_smartcash_per_usd %></td>
+      <td data-label="Bitcoin"><%= (@price_of_smartcash_per_usd.to_f/@price_per_bitcoin.to_f) %></td>
+      <td data-label="Smartcash">1</td>
+    </tr>
+  </tbody>
+</table>
+</div>

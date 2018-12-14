@@ -1,3 +1,0 @@
-class Gbpcrypto < ApplicationRecord
-
-end
